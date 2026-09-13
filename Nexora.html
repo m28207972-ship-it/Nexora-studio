@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nexora Studio | Creative Digital Studio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080a10;
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    background:rgba(8,10,16,0.90);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #252936;
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    padding:20px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#7c5cff;
+}
+
+.menu a{
+    color:#c5cad5;
+    text-decoration:none;
+    margin-left:28px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#7c5cff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 25px 70px;
+
+    background:
+    radial-gradient(circle at 50% 15%,
+    #30245b 0%,
+    #111421 35%,
+    #080a10 65%);
+}
+
+.badge{
+    color:#9b8aff;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:clamp(55px,8vw,95px);
+    line-height:1;
+    letter-spacing:-5px;
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:#7c5cff;
+}
+
+.hero p{
+    max-width:680px;
+    margin:auto;
+    color:#aeb5c2;
+    font-size:19px;
+    line-height:1.7;
+}
+
+.buttons{
+    margin-top:32px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    border-radius:10px;
+    background:#7c5cff;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin:6px;<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nexora Studio | Creative Digital Studio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080a10;
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    background:rgba(8,10,16,0.90);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #252936;
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    padding:20px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#7c5cff;
+}
+
+.menu a{
+    color:#c5cad5;
+    text-decoration:none;
+    margin-left:28px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#7c5cff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 25px 70px;
+
+    background:
+    radial-gradient(circle at 50% 15%,
+    #30245b 0%,
+    #111421 35%,
+    #080a10 65%);
+}
+
+.badge{
+    color:#9b8aff;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:clamp(55px,8vw,95px);
+    line-height:1;
+    letter-spacing:-5px;
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:#7c5cff;
+}
+
+.hero p{
+    max-width:680px;
+    margin:auto;
+    color:#aeb5c2;
+    font-size:19px;
+    line-height:1.7;
+}
+
+.buttons{
+    margin-top:32px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    border-radius:10px;
+    background:#7c5cff;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin:6px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(124,92,255,.3);
+}
+
+.btn.secondary{
+    background:#171a23;
+    border:1px solid #303542;
+}
+
+/* COMMON SECTION */
+section{
+    max-width:1150px;
+    margin:auto;
+    padding:100px 30px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#9299a8;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:45px;
+    line-height:1.1;
+}
+
+.about p{
+    color:#aeb5c2;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#11141c;
+    border:1px solid #292e3a;
+    border-radius:18px;
+    padding:32px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#7c5cff;
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#9da5b3;
+    line-height:1.7;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.work{
+    height:210px;
+    border-radius:18px;
+    padding:25px;
+    display:flex;
+    align-items:flex-end;
+    font-size:24px;
+    font-weight:bold;
+
+    background:
+    linear-gradient(135deg,#7c5cff,#191b25);
+}
+
+.work:nth-child(2){
+    background:
+    linear-gradient(135deg,#16a58e,#151923);
+}
+
+.work:nth-child(3){
+    background:
+    linear-gradient(135deg,#df5b8b,#181923);
+}
+
+/* WHY US */
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.feature{
+    padding:25px;
+    background:#11141c;
+    border:1px solid #292e3a;
+    border-radius:15px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#9da5b3;
+}
+
+/* CONTACT */
+.contact-box{
+    text-align:center;
+    background:#11141c;
+    border:1px solid #292e3a;
+    border-radius:22px;
+    padding:65px 30px;
+}
+
+.contact-box h2{
+    font-size:45px;
+    margin:10px 0;
+}
+
+.contact-box p{
+    color:#aab1be;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    border-top:1px solid #20242d;
+    text-align:center;
+    padding:35px;
+    color:#707887;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:55px;
+        letter-spacing:-3px;
+    }
+
+    .about,
+    .services,
+    .portfolio,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .about h2{
+        font-size:35px;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="navbar">
+
+<div class="logo">
+Nexora<span>.</span>
+</div>
+
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero" id="home">
+
+<div>
+
+<div class="badge">
+CREATIVE DIGITAL STUDIO
+</div>
+
+<h1>
+We create
+<span>digital</span><br>
+experiences.
+</h1>
+
+<p>
+Nexora Studio helps creators and businesses
+build a modern, professional and memorable
+digital presence.
+</p>
+
+<div class="buttons">
+
+<a href="#services" class="btn">
+Explore Services
+</a>
+
+<a href="#contact" class="btn secondary">
+Let's Talk
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="about">
+
+<div>
+
+<div class="badge">
+ABOUT NEXORA
+</div>
+
+<h2>
+Ideas into something
+people remember.
+</h2>
+
+</div>
+
+<div>
+
+<p>
+Nexora Studio is a creative digital studio
+focused on design, photo editing, video
+editing and digital content.
+</p>
+
+<p>
+Our goal is simple — turn your ideas into
+clean, modern and professional visual
+experiences.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+<div class="section-title">
+
+<h2>
+Our Services
+</h2>
+
+<p>
+Creative solutions for your digital presence.
+</p>
+
+</div>
+
+
+<div class="services">
+
+<div class="card">
+
+<div class="icon">🎨</div>
+
+<h3>
+Graphic Design
+</h3>
+
+<p>
+Professional posters, thumbnails,
+social media posts, banners and
+branding visuals.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🎬</div>
+
+<h3>
+Video Editing
+</h3>
+
+<p>
+Engaging video editing for YouTube,
+Instagram Reels and short-form
+content.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📸</div>
+
+<h3>
+Photo Editing
+</h3>
+
+<p>
+Creative photo enhancement,
+color correction, retouching
+and professional edits.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+
+<div class="section-title">
+
+<h2>
+Our Portfolio
+</h2>
+
+<p>
+Creative work made for modern brands.
+</p>
+
+</div>
+
+
+<div class="portfolio">
+
+<div class="work">
+Brand Identity
+</div>
+
+<div class="work">
+Social Media
+</div>
+
+<div class="work">
+Video Content
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY US -->
+<section>
+
+<div class="section-title">
+
+<h2>
+Why Nexora?
+</h2>
+
+<p>
+Simple ideas. Professional execution.
+</p>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+
+<h3>
+✨ Modern Design
+</h3>
+
+<p>
+Clean and modern visuals designed
+to make your brand stand out.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>
+⚡ Fast Delivery
+</h3>
+
+<p>
+We focus on delivering creative work
+quickly without sacrificing quality.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>
+🎯 Creative Approach
+</h3>
+
+<p>
+Every project gets a unique visual
+direction based on its purpose.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>
+💡 Simple Communication
+</h3>
+
+<p>
+Clear communication from the first
+idea to the final result.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="contact-box">
+
+<div class="badge">
+LET'S WORK TOGETHER
+</div>
+
+<h2>
+Have a project in mind?
+</h2>
+
+<p>
+Tell us about your idea and let's turn
+it into something amazing.
+</p>
+
+<a
+class="btn"
+href="mailto:hello@nexorastudio.com">
+Contact Nexora
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+© 2026 Nexora Studio.
+All rights reserved.
+
+</footer>
+
+</body>
+</html>
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(124,92,255,.3);
+}
+
+.btn.secondary{
+    background:#171a23;
+    border:1px solid #303542;
+}
+
+/* COMMON SECTION */
+section{
+    max-width:1150px;
+    margin:auto;
+    padding:100px 30px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#9299a8;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:45px;
+    line-height:1.1;
+}
+
+.about p{
+    color:#aeb5c2;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#11141c;
+    border:1px solid #292e3a;
+    border-radius:18px;
+    padding:32px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#7c5cff;
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#9da5b3;
+    line-height:1.7;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.work{
+    height:210px;
+    border-radius:18px;
+    padding:25px;
+    display:flex;
+    align-items:flex-end;
+    font-size:24px;
+    font-weight:bold;
+
+    background:
+    linear-gradient(135deg,#7c5cff,#191b25);
+}
+
+.work:nth-child(2){
+    background:
+    linear-gradient(135deg,#16a58e,#151923);
+}
+
+.work:nth-child(3){
+    background:
+    linear-gradient(135deg,#df5b8b,#181923);
+}
+
+/* WHY US */
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.feature{
+    padding:25px;
+    background:#11141c;
+    border:1px solid #292e3a;
+    border-radius:15px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#9da5b3;
+}
+
+/* CONTACT */
+.contact-box{
+    text-align:center;
+    background:#11141c;
+    border:1px solid #292e3a;
+    border-radius:22px;
+    padding:65px 30px;
+}
+
+.contact-box h2{
+    font-size:45px;
+    margin:10px 0;
+}
+
+.contact-box p{
+    color:#aab1be;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    border-top:1px solid #20242d;
+    text-align:center;
+    padding:35px;
+    color:#707887;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:55px;
+        letter-spacing:-3px;
+    }
+
+    .about,
+    .services,
+    .portfolio,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .about h2{
+        font-size:35px;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="navbar">
+
+<div class="logo">
+Nexora<span>.</span>
+</div>
+
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero" id="home">
+
+<div>
+
+<div class="badge">
+CREATIVE DIGITAL STUDIO
+</div>
+
+<h1>
+We create
+<span>digital</span><br>
+experiences.
+</h1>
+
+<p>
+Nexora Studio helps creators and businesses
+build a modern, professional and memorable
+digital presence.
+</p>
+
+<div class="buttons">
+
+<a href="#services" class="btn">
+Explore Services
+</a>
+
+<a href="#contact" class="btn secondary">
+Let's Talk
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="about">
+
+<div>
+
+<div class="badge">
+ABOUT NEXORA
+</div>
+
+<h2>
+Ideas into something
+people remember.
+</h2>
+
+</div>
+
+<div>
+
+<p>
+Nexora Studio is a creative digital studio
+focused on design, photo editing, video
+editing and digital content.
+</p>
+
+<p>
+Our goal is simple — turn your ideas into
+clean, modern and professional visual
+experiences.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+<div class="section-title">
+
+<h2>
+Our Services
+</h2>
+
+<p>
+Creative solutions for your digital presence.
+</p>
+
+</div>
+
+
+<div class="services">
+
+<div class="card">
+
+<div class="icon">🎨</div>
+
+<h3>
+Graphic Design
+</h3>
+
+<p>
+Professional posters, thumbnails,
+social media posts, banners and
+branding visuals.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🎬</div>
+
+<h3>
+Video Editing
+</h3>
+
+<p>
+Engaging video editing for YouTube,
+Instagram Reels and short-form
+content.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📸</div>
+
+<h3>
+Photo Editing
+</h3>
+
+<p>
+Creative photo enhancement,
+color correction, retouching
+and professional edits.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+
+<div class="section-title">
+
+<h2>
+Our Portfolio
+</h2>
+
+<p>
+Creative work made for modern brands.
+</p>
+
+</div>
+
+
+<div class="portfolio">
+
+<div class="work">
+Brand Identity
+</div>
+
+<div class="work">
+Social Media
+</div>
+
+<div class="work">
+Video Content
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY US -->
+<section>
+
+<div class="section-title">
+
+<h2>
+Why Nexora?
+</h2>
+
+<p>
+Simple ideas. Professional execution.
+</p>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+
+<h3>
+✨ Modern Design
+</h3>
+
+<p>
+Clean and modern visuals designed
+to make your brand stand out.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>
+⚡ Fast Delivery
+</h3>
+
+<p>
+We focus on delivering creative work
+quickly without sacrificing quality.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>
+🎯 Creative Approach
+</h3>
+
+<p>
+Every project gets a unique visual
+direction based on its purpose.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>
+💡 Simple Communication
+</h3>
+
+<p>
+Clear communication from the first
+idea to the final result.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="contact-box">
+
+<div class="badge">
+LET'S WORK TOGETHER
+</div>
+
+<h2>
+Have a project in mind?
+</h2>
+
+<p>
+Tell us about your idea and let's turn
+it into something amazing.
+</p>
+
+<a
+class="btn"
+href="mailto:hello@nexorastudio.com">
+Contact Nexora
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+© 2026 Nexora Studio.
+All rights reserved.
+
+</footer>
+
+</body>
+</html>
