@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090914">
+  <meta name="description" content="Nexora Studio creates thoughtful digital design, visual content, and modern web experiences for creators and growing brands.">
+  <title>Nexora Studio — Creative Digital Studio</title>
+  <style>
+    :root {
+      --bg: #090914;
+      --surface: #111120;
+      --surface-2: #17172a;
+      --text: #f7f7ff;
+      --muted: #b3b3ca;
+      --purple: #8b5cf6;
+      --cyan: #67e8f9;
+      --line: rgba(255,255,255,.12);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 15% 0%, rgba(139,92,246,.17), transparent 34rem),
+        radial-gradient(ellipse at 90% 20%, rgba(103,232,249,.08), transparent 30rem),
+        var(--bg);
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(9,9,20,.82); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .logo { text-decoration: none; font-size: 1.45rem; font-weight: 850; letter-spacing: -.06em; }
+    .logo span { color: var(--purple); }
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .93rem; transition: color .2s; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: white; }
+    .nav-cta { border: 1px solid rgba(139,92,246,.55); border-radius: 999px; padding: 10px 16px; color: white !important; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: var(--surface); color: white; border-radius: 10px; padding: 9px 12px; font-size: 1rem; }
+    .hero { min-height: 650px; display: grid; place-items: center; text-align: center; padding: 105px 0 95px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px; color: #d3c5ff;
+      border: 1px solid rgba(139,92,246,.35); background: rgba(139,92,246,.10);
+      border-radius: 999px; padding: 7px 13px; font-size: .78rem; font-weight: 750; letter-spacing: .13em;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); }
+    h1 { font-size: clamp(3.1rem, 8vw, 6.5rem); line-height: .98; letter-spacing: -.075em; margin: 25px 0 22px; }
+    .gradient-text { background: linear-gradient(100deg, #c4b5fd 5%, #8b5cf6 45%, #67e8f9 95%); color: transparent; background-clip: text; -webkit-background-clip: text; }
+    .hero p { max-width: 690px; margin: 0 auto; color: var(--muted); font-size: clamp(1rem, 2vw, 1.2rem); }
+    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; font-weight: 750; border-radius: 12px; padding: 13px 20px; border: 1px solid transparent; transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(110deg, #8b5cf6, #6d4de8); color: white; box-shadow: 0 10px 35px rgba(139,92,246,.25); }
+    .btn-secondary { background: rgba(255,255,255,.04); border-color: var(--line); color: white; }
+    .hero-note { margin-top: 22px !important; font-size: .85rem !important; color: #85859f !important; }
+    .section { padding: 88px 0; }
+    .section-heading { text-align: center; max-width: 670px; margin: 0 auto 42px; }
+    .section-heading h2 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; letter-spacing: -.05em; margin: 13px 0; }
+    .section-heading p { color: var(--muted); }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 45px; align-items: center; }
+    .about-panel { padding: 32px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(145deg, rgba(139,92,246,.14), rgba(255,255,255,.025)); }
+    .about-panel h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.055em; line-height: 1.1; margin: 14px 0; }
+    .about-copy p { color: var(--muted); margin-bottom: 15px; }
+    .about-copy p:last-child { margin-bottom: 0; }
+    .service-grid, .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--line); border-radius: 20px; padding: 27px; background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018)); transition: transform .25s, border-color .25s, background .25s; }
+    .card:hover { transform: translateY(-5px); border-color: rgba(139,92,246,.7); background: linear-gradient(145deg, rgba(139,92,246,.12), rgba(255,255,255,.025)); }
+    .icon-box { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 15px; background: rgba(139,92,246,.16); border: 1px solid rgba(139,92,246,.25); font-size: 1.55rem; margin-bottom: 20px; }
+    .card h3 { font-size: 1.2rem; margin-bottom: 9px; }
+    .card p { color: var(--muted); font-size: .95rem; }
+    .work-card { min-height: 235px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+    .work-art { min-height: 125px; border-radius: 14px; display: grid; place-items: center; font-size: 2.8rem; background: radial-gradient(circle at 30% 25%, rgba(196,181,253,.8), transparent 22%), linear-gradient(135deg, #32205f, #151526 68%); margin-bottom: 20px; }
+    .work-card:nth-child(2) .work-art { background: radial-gradient(circle at 70% 25%, rgba(103,232,249,.65), transparent 25%), linear-gradient(135deg, #123c49, #151526 70%); }
+    .work-card:nth-child(3) .work-art { background: radial-gradient(circle at 30% 25%, rgba(244,114,182,.65), transparent 25%), linear-gradient(135deg, #4b2048, #151526 70%); }
+    .work-card small { color: #c4b5fd; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .work-card h3 { margin-top: 5px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .feature { display: flex; gap: 15px; align-items: flex-start; padding: 22px; border: 1px solid var(--line); border-radius: 17px; background: rgba(255,255,255,.025); }
+    .feature-mark { color: var(--cyan); font-size: 1.25rem; }
+    .feature h3 { font-size: 1rem; margin-bottom: 4px; }
+    .feature p { color: var(--muted); font-size: .92rem; }
+    .contact-box { text-align: center; padding: clamp(30px, 6vw, 66px) 24px; border: 1px solid rgba(139,92,246,.35); border-radius: 26px; background: radial-gradient(ellipse at top, rgba(139,92,246,.19), transparent 65%), var(--surface); }
+    .contact-box h2 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.055em; margin: 14px 0; }
+    .contact-box p { max-width: 610px; margin: 0 auto; color: var(--muted); }
+    .contact-box .actions { margin-top: 25px; }
+    footer { margin-top: 35px; padding: 28px 0; border-top: 1px solid var(--line); color: #85859f; font-size: .9rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a { color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: white; }
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+    @media (max-width: 780px) {
+      .container { width: min(100% - 30px, var(--max)); }
+      .menu-toggle { display: inline-flex; }
+      .nav-links { display: none; position: absolute; top: 75px; left: 0; right: 0; padding: 18px 20px 22px; flex-direction: column; align-items: stretch; gap: 0; background: rgba(9,9,20,.98); border-bottom: 1px solid var(--line); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 4px; margin: 0; }
+      .nav-cta { text-align: center; margin-top: 7px !important; }
+      .hero { min-height: 590px; padding: 85px 0 70px; }
+      .about-grid, .service-grid, .work-grid, .feature-grid { grid-template-columns: 1fr; }
+      .section { padding: 68px 0; }
+      .about-grid { gap: 22px; }
+      .card { padding: 24px; }
+      .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Nexora Studio home">Nexora<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰ Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a class="nav-cta" href="#contact">Let's talk ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <header class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow"><span class="dot"></span> CREATIVE DIGITAL STUDIO</div>
+        <h1>Ideas made<br><span class="gradient-text">impossible to ignore.</span></h1>
+        <p>Nexora Studio helps creators and growing brands build a distinctive digital presence through thoughtful design, visual content, and modern web experiences.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#services">Explore our services <span aria-hidden="true">→</span></a>
+          <a class="btn btn-secondary" href="#portfolio">See our work</a>
+        </div>
+        <p class="hero-note">Creative thinking · Clean design · Digital-first ideas</p>
+      </div>
+    </header>
+
+    <section class="section container" id="about">
+      <div class="about-grid">
+        <div class="about-panel">
+          <div class="eyebrow">ABOUT NEXORA</div>
+          <h2>Small details.<br><span class="gradient-text">Big impressions.</span></h2>
+          <p style="color:var(--muted)">A creative space for ideas that deserve to stand out.</p>
+        </div>
+        <div class="about-copy">
+          <p>Nexora Studio is a creative digital studio focused on graphic design, photo editing, video content, and digital experiences.</p>
+          <p>Our approach is simple: keep the work clear, purposeful, and memorable. Whether it's a social post, a video, or a website, every detail should support the bigger idea.</p>
+          <p>We’re building a place where creativity meets practical digital solutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="services">
+      <div class="section-heading">
+        <div class="eyebrow">WHAT WE DO</div>
+        <h2>Creative services for your <span class="gradient-text">next big idea.</span></h2>
+        <p>Flexible creative support for creators, projects, and growing brands.</p>
+      </div>
+      <div class="service-grid">
+        <article class="card">
+          <div class="icon-box" aria-hidden="true">✦</div>
+          <h3>Graphic Design</h3>
+          <p>Posters, thumbnails, social media creatives, banners, and visual branding with a clear, consistent style.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box" aria-hidden="true">▶</div>
+          <h3>Video Editing</h3>
+          <p>Engaging edits for short-form videos, social media, and YouTube content that keep the story moving.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box" aria-hidden="true">◈</div>
+          <h3>Photo Editing</h3>
+          <p>Color correction, creative enhancements, and polished edits that bring your visual ideas to life.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="portfolio">
+      <div class="section-heading">
+        <div class="eyebrow">SELECTED CONCEPTS</div>
+        <h2>A glimpse of our <span class="gradient-text">creative direction.</span></h2>
+        <p>These are concept categories for the portfolio. Replace them with your real projects as you create them.</p>
+      </div>
+      <div class="work-grid">
+        <article class="card work-card">
+          <div class="work-art" aria-hidden="true">✧</div>
+          <div><small>Branding</small><h3>Brand Identity</h3><p>Visual systems and memorable first impressions.</p></div>
+        </article>
+        <article class="card work-card">
+          <div class="work-art" aria-hidden="true">▧</div>
+          <div><small>Social Creative</small><h3>Social Media Design</h3><p>Consistent creative assets for digital platforms.</p></div>
+        </article>
+        <article class="card work-card">
+          <div class="work-art" aria-hidden="true">◉</div>
+          <div><small>Motion</small><h3>Video Content</h3><p>Visual storytelling shaped for the screen.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="why-title">
+      <div class="section-heading">
+        <div class="eyebrow">THE NEXORA APPROACH</div>
+        <h2 id="why-title">Creative work, with <span class="gradient-text">purpose.</span></h2>
+        <p>Good design should look great and make sense.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-mark">✦</div><div><h3>Modern by design</h3><p>Clean layouts and considered visual details that help your work feel current.</p></div></article>
+        <article class="feature"><div class="feature-mark">↗</div><div><h3>Built around your idea</h3><p>Creative choices that support the message, audience, and purpose of each project.</p></div></article>
+        <article class="feature"><div class="feature-mark">◎</div><div><h3>Consistent visuals</h3><p>A more cohesive look across your website and social platforms.</p></div></article>
+        <article class="feature"><div class="feature-mark">✉</div><div><h3>Clear communication</h3><p>A straightforward process from the first idea to the final creative direction.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="contact-box">
+        <div class="eyebrow">LET'S CREATE SOMETHING</div>
+        <h2>Have an idea in mind?</h2>
+        <p>Tell us what you’re imagining. Let’s explore how Nexora Studio can help turn that idea into something clear, creative, and memorable.</p>
+        <div class="actions">
+          <!-- Replace this email with your real contact email before publishing. -->
+          <a class="btn btn-primary" href="mailto:hello@nexorastudio.com?subject=Nexora%20Studio%20Project%20Enquiry">Contact Nexora <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-secondary" href="#home">Back to top ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Nexora Studio. Built with creativity.</p>
+      <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
